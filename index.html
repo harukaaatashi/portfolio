@@ -1,120 +1,272 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="UTF-8">
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ポートフォリオ | 田代 - Webデザイナー（デザイン＋コーディング）</title>
-<meta name="description" content="Webデザイナー田代のポートフォリオ。LP制作・Webサイト制作・ロゴ・印刷物・LINEリッチメニュー。デザインからコーディングまで一貫対応。">
+<title>田代のポートフォリオ | ホームページとLPの制作</title>
+<meta name="description" content="Webデザイナー田代のポートフォリオ。小さなお店や会社のホームページとLPを、デザインから公開まで1人で作ります。ロゴ、名刺やチラシ、LINEのリッチメニューも作ります。">
+<meta name="theme-color" content="#1C2788">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { background:#eceef4; }
-  body { font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif; color:#1a1a2e; background:#fff; max-width:794px; margin:24px auto; padding:36px 40px; box-shadow:0 2px 18px rgba(20,25,80,.13); border-radius:4px; }
-  header { border-bottom:3px solid #1C2788; padding-bottom:14px; margin-bottom:16px; }
-  h1 { font-size:25px; letter-spacing:.04em; }
-  h1 span { color:#1C2788; }
-  .role { font-size:12.5px; color:#444; margin-top:6px; line-height:1.7; }
-  .tags { margin-top:8px; }
-  .tag { display:inline-block; background:#eef0fa; color:#1C2788; font-size:11px; padding:3px 10px; border-radius:20px; margin:0 4px 4px 0; font-weight:600; }
-  h2 { font-size:15px; color:#1C2788; border-left:4px solid #1C2788; padding-left:8px; margin:20px 0 10px; }
-  .work { margin-bottom:18px; }
-  .work h3 { font-size:14.5px; margin-bottom:3px; }
-  .work .meta { font-size:11px; color:#666; margin-bottom:5px; }
-  .badge { display:inline-block; font-size:10px; font-weight:700; padding:2px 8px; border-radius:3px; margin-right:6px; vertical-align:1px; }
-  .b-real { background:#1C2788; color:#fff; }
-  .b-self { background:#fff; color:#1C2788; border:1px solid #1C2788; }
-  .work p { font-size:12px; line-height:1.75; color:#333; }
-  .spec { font-size:11px; color:#555; margin-top:4px; }
-  .spec b { color:#1C2788; }
-  .imgs { display:flex; gap:10px; margin-top:8px; }
-  .imgs img { border:1px solid #ddd; border-radius:6px; object-fit:cover; object-position:top; max-width:100%; }
-  .w-pc { width:480px; height:285px; }
-  .w-sp { width:170px; height:285px; }
-  .w-mid { width:480px; height:215px; }
-  .w-rich { width:660px; height:222px; }
-  table { width:100%; border-collapse:collapse; font-size:12px; }
-  td { border-bottom:1px solid #e5e5ef; padding:6px 4px; }
-  td.price { text-align:right; font-weight:700; color:#1C2788; white-space:nowrap; }
-  ul.list { font-size:12px; line-height:1.9; color:#333; padding-left:18px; }
-  .note { font-size:11px; color:#666; margin-top:6px; line-height:1.7; }
-  footer { margin-top:18px; border-top:1px solid #ddd; padding-top:10px; font-size:11px; color:#666; line-height:1.8; }
-  a { color:#1C2788; }
-  @media (max-width:640px) {
-    body { margin:0; padding:24px 18px; box-shadow:none; }
-    .imgs { flex-direction:column; }
-    .imgs img { width:100% !important; height:auto !important; }
+  :root {
+    --c-brand: #1C2788;
+    --c-brand-strong: #151D66;
+    --c-brand-weak: #EEF0FA;
+    --c-text: #1A1A2E;
+    --c-text-sub: #55566A;
+    --c-line: #E3E4EE;
+    --c-bg: #FFFFFF;
+    --c-bg-page: #F4F5F9;
   }
-</style></head>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: var(--c-bg-page); scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+    font-size: 16px; line-height: 1.8; color: var(--c-text);
+    background: var(--c-bg);
+    max-width: 840px; margin: 32px auto; padding: 48px 40px;
+    text-autospace: normal; line-break: strict;
+    -webkit-text-size-adjust: 100%;
+  }
+  h1, h2, h3 { font-feature-settings: "palt"; line-height: 1.5; }
+  a { color: var(--c-brand); text-underline-offset: 4px; }
+  a:focus-visible { outline: 2px solid var(--c-brand); outline-offset: 4px; border-radius: 4px; }
+  .sub { font-size: 14px; line-height: 1.7; color: var(--c-text-sub); }
+
+  header { padding-bottom: 32px; border-bottom: 1px solid var(--c-line); }
+  .name { font-size: 14px; font-weight: 700; color: var(--c-brand); letter-spacing: .04em; }
+  h1 { font-size: 28px; margin-top: 8px; text-wrap: balance; word-break: auto-phrase; }
+  .lead { margin-top: 16px; }
+  .button {
+    display: inline-block; margin-top: 24px; padding: 12px 24px; border-radius: 8px;
+    background: var(--c-brand); color: var(--c-bg); font-weight: 700; text-decoration: none;
+    transition: background-color .15s;
+  }
+  .button:hover { background: var(--c-brand-strong); }
+
+  section { margin-top: 48px; }
+  h2 { font-size: 20px; color: var(--c-brand); padding-left: 12px; border-left: 4px solid var(--c-brand); margin-bottom: 24px; }
+
+  .work { padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--c-line); }
+  .work:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+  .work h3 { font-size: 18px; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; line-height: 1.5; padding: 2px 8px; border-radius: 4px; margin-right: 8px; vertical-align: 2px; }
+  .tag-real { background: var(--c-brand); color: var(--c-bg); }
+  .tag-self { background: var(--c-bg); color: var(--c-brand); border: 1px solid var(--c-brand); }
+  .work .kind { margin-top: 4px; }
+  .work .desc { margin-top: 12px; }
+  .result { margin-top: 12px; padding: 12px 16px; background: var(--c-brand-weak); border-radius: 8px; }
+  .result b { color: var(--c-brand); margin-right: 8px; }
+  dl.spec { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin-top: 12px; font-size: 14px; line-height: 1.7; }
+  dl.spec dt { color: var(--c-text-sub); }
+  dl.spec dd { min-width: 0; overflow-wrap: anywhere; }
+  .imgs { display: flex; gap: 12px; margin-top: 16px; align-items: flex-start; }
+  .imgs img { display: block; border: 1px solid var(--c-line); border-radius: 8px; object-fit: cover; object-position: top; max-width: 100%; height: auto; }
+  .w-pc { width: 584px; aspect-ratio: 584 / 336; }
+  .w-sp { width: 176px; aspect-ratio: 176 / 336; }
+  .w-wide { width: 100%; }
+
+  table { width: 100%; border-collapse: collapse; }
+  td { border-bottom: 1px solid var(--c-line); padding: 16px 0; vertical-align: top; }
+  td .what { font-weight: 700; }
+  td .sub { margin-top: 4px; }
+  td.price { text-align: right; font-weight: 700; color: var(--c-brand); white-space: nowrap; font-variant-numeric: tabular-nums; padding-left: 16px; }
+  .note { margin-top: 12px; }
+
+  ol.steps { list-style: none; counter-reset: step; }
+  ol.steps li { counter-increment: step; position: relative; padding-left: 48px; margin-bottom: 20px; }
+  ol.steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--c-brand-weak); color: var(--c-brand);
+    font-weight: 700; display: grid; place-items: center; line-height: 1; font-variant-numeric: tabular-nums;
+  }
+  ol.steps b { display: block; }
+
+  ul.list { padding-left: 20px; margin-top: 12px; }
+  ul.list li { margin-bottom: 4px; }
+  #about dl.spec { margin-top: 16px; }
+  dl.faq dt { font-weight: 700; margin-top: 20px; }
+  dl.faq dt:first-child { margin-top: 0; }
+  dl.faq dd { margin-top: 4px; }
+
+  .contact { padding: 24px; background: var(--c-brand-weak); border-radius: 8px; }
+  .contact p + p { margin-top: 8px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--c-line); }
+
+  @media (max-width: 640px) {
+    body { margin: 0; padding: 32px 16px 48px; }
+    h1 { font-size: 24px; }
+    .imgs img.w-pc { width: 100%; aspect-ratio: auto; }
+    .imgs img.w-sp { display: none; }
+    tr { display: block; padding: 16px 0; border-bottom: 1px solid var(--c-line); }
+    td { display: block; border-bottom: 0; padding: 0; }
+    td.price { text-align: left; padding: 4px 0 0; }
+  }
+</style>
+</head>
 <body>
+
 <header>
-  <h1>田代 <span>| Webデザイナー（デザイン＋コーディング）</span></h1>
-  <p class="role">デザイナー歴4年。ToC向けモバイルサービスのUIデザインを中心に、新規事業の価値検証・リサーチ、デザインシステム構築まで担当。デザインから実装まで一貫対応できるため、LPや小規模サイトを短期間で納品できます。</p>
-  <div class="tags">
-    <span class="tag">LP制作</span><span class="tag">Webサイト制作</span><span class="tag">ロゴ</span><span class="tag">名刺・チラシ・メニュー</span><span class="tag">LINEリッチメニュー</span><span class="tag">UIデザイン</span><span class="tag">小規模開発</span>
-  </div>
+  <p class="name">田代 / Webデザイナー</p>
+  <h1>小さなお店や会社のホームページを、デザインから公開まで1人で作ります</h1>
+  <p class="lead">本業では、UI/UXデザイナーとして4年、スマホで使うサービスの画面を作っています。デザインのあとのコーディングも自分でするので、やりとりが少なく、早く公開できます。ロゴ、名刺やチラシ、LINEのリッチメニューも作ります。</p>
+  <a class="button" href="#contact">相談のしかたを見る</a>
 </header>
 
-<h2>制作実績</h2>
+<section id="works">
+  <h2>実績</h2>
 
-<div class="work">
-  <h3><span class="badge b-self">自主制作</span>1. LP「ETERNAL PET」</h3>
-  <p class="meta">LP制作（デザイン／コーディング）｜ 公開中：<a href="https://eternal-pet-concept.netlify.app/ja/">eternal-pet-concept.netlify.app</a></p>
-  <p>ペットの長寿ケアという未来の会員制サービスを想定したコンセプトLP。「医療のように精密で、家族のように温かい」という世界観を、青を基調としたクリーンなデザインと大きなタイポグラフィで表現しました。デザインシステム（色・書体・コンポーネント）を先に設計し、全セクションのトーンを統一。日英2言語・レスポンシブ対応。</p>
-  <p class="spec"><b>担当範囲</b>：コンセプト設計／デザイン／コーディング（全て）　<b>制作期間</b>：約2時間（AI活用ワークフローによる短納期制作の実例）　<b>使用ツール</b>：Figma、HTML/CSS、JavaScript</p>
-  <div class="imgs"><img class="w-pc" src="images/eternal-pc.jpg" alt="ETERNAL PET LP PC表示"><img class="w-sp" src="images/eternal-sp.jpg" alt="ETERNAL PET LP スマホ表示"></div>
-</div>
+  <article class="work">
+    <h3><span class="tag tag-real">実案件</span>アパレル会社の公式サイト「SUNLADY FASHION DIRECT」</h3>
+    <p class="kind sub">ホームページの制作と運用</p>
+    <p class="desc">取引先の方や、働きたいと考えている方が、知りたいことに迷わずたどり着けるように、ページの組み立てから考えました。ブランドの雰囲気を守るために、色、余白、文字の決まりを先に作り、動きのある画面までスマホとPCの両方で作りました。</p>
+    <p class="result"><b>変わったこと</b>ニュースを、会社の方が自分で更新できるようになりました。</p>
+    <dl class="spec">
+      <dt>担当</dt><dd>デザイン、実装、公開したあとの運用</dd>
+      <dt>使ったもの</dt><dd>Figma、Next.js、microCMS</dd>
+      <dt>サイト</dt><dd><a href="https://sunlady.tokyo">sunlady.tokyo</a></dd>
+    </dl>
+    <div class="imgs">
+      <img class="w-pc" src="images/sunlady-pc.jpg" width="1000" height="694" alt="SUNLADY FASHION DIRECTの公式サイト。PCで見たトップページ">
+      <img class="w-sp" src="images/sunlady-sp.jpg" width="500" height="961" alt="同じサイトをスマホで見たところ" loading="lazy">
+    </div>
+  </article>
 
-<div class="work">
-  <h3><span class="badge b-real">実案件</span>2. 企業公式サイト「SUNLADY FASHION DIRECT」</h3>
-  <p class="meta">Webサイト制作（デザイン／実装／運用）｜ Next.js / microCMS ｜ 公開中：<a href="https://sunlady.tokyo">sunlady.tokyo</a></p>
-  <p>アパレル企業の公式サイト。ブランドの世界観を保ちながら、取引先や採用候補者が必要な情報へ迷わず辿り着ける構成に設計しました。色・余白・タイポグラフィを定めたデザインの設計書を整備し、ニュース更新はCMS化して運用負荷を軽減。アニメーションを含むレスポンシブ実装まで一貫対応しています。</p>
-  <p class="spec"><b>担当範囲</b>：デザイン／実装／運用　<b>状態</b>：公開中・運用継続中　<b>使用ツール</b>：Figma、Next.js、microCMS</p>
-  <div class="imgs"><img class="w-pc" src="images/sunlady-pc.jpg" alt="SUNLADY公式サイト PC表示"><img class="w-sp" src="images/sunlady-sp.jpg" alt="SUNLADY公式サイト スマホ表示"></div>
-</div>
+  <article class="work">
+    <h3><span class="tag tag-self">自主制作</span>ペットの長寿ケアのLP「ETERNAL PET」</h3>
+    <p class="kind sub">LPのコンセプト、デザイン、コーディング</p>
+    <p class="desc">ペットが長く元気に暮らすための、会員制のサービスがあったら、と考えて作ったLPです。医療のようにていねいで、家族のようにあたたかい、という印象を、青を中心にした色と大きな文字で伝えました。色や文字の決まりを先に作り、すべての区画の印象をそろえています。日本語と英語に切り替えられます。</p>
+    <dl class="spec">
+      <dt>担当</dt><dd>コンセプト、デザイン、コーディング</dd>
+      <dt>使ったもの</dt><dd>Figma、HTML、CSS、JavaScript</dd>
+      <dt>サイト</dt><dd><a href="https://eternal-pet-concept.netlify.app/ja/">eternal-pet-concept.netlify.app</a></dd>
+    </dl>
+    <div class="imgs">
+      <img class="w-pc" src="images/eternal-pc.jpg" width="1000" height="729" alt="ETERNAL PETのLP。PCで見たはじめの画面" loading="lazy">
+      <img class="w-sp" src="images/eternal-sp.jpg" width="500" height="961" alt="同じLPをスマホで見たところ" loading="lazy">
+    </div>
+  </article>
 
-<div class="work">
-  <h3><span class="badge b-self">自主制作</span>3. 家族見守りサービス「MimamoriVoice」</h3>
-  <p class="meta">サービスUIデザイン／開発 ｜ Next.js / LINE連携 ｜ 稼働中：<a href="https://mimamori-voice.vercel.app">mimamori-voice.vercel.app</a></p>
-  <p>離れて暮らす家族が声を届け合う見守りサービス。「見守られている感」ではなく「声が届く温かさ」を軸にコンセプトを設計し、音声一覧やカレンダーなど日常的に使う画面の情報設計から実装まで担当しました。</p>
-  <p class="spec"><b>担当範囲</b>：コンセプト設計／UIデザイン／実装（全て）　<b>使用ツール</b>：Figma、Next.js、LINE Messaging API</p>
-  <div class="imgs"><img class="w-mid" src="images/mimamori.jpg" alt="MimamoriVoice 画面"></div>
-</div>
+  <article class="work">
+    <h3><span class="tag tag-self">自主制作</span>江戸の銭湯の手引書を読むサイト「湯語教」</h3>
+    <p class="kind sub">Webサイトの企画、デザイン、実装</p>
+    <p class="desc">1851年に書かれた、銭湯の経営の手引書を読むためのサイトです。原本の画像、くずし字を活字にしたもの、今の言葉にした訳を並べて、くずし字が読めなくても最後まで読めるようにしました。原本の章立てにそって11章に分け、英語でも読めます。</p>
+    <dl class="spec">
+      <dt>担当</dt><dd>企画、デザイン、実装</dd>
+      <dt>使ったもの</dt><dd>React、TypeScript、Vite</dd>
+      <dt>サイト</dt><dd><a href="https://harukaaatashi.github.io/yugokyo/">harukaaatashi.github.io/yugokyo</a></dd>
+    </dl>
+    <div class="imgs">
+      <img class="w-pc" src="images/yugokyo-pc.jpg" width="1000" height="729" alt="湯語教のサイトのトップページ。原本の挿絵が大きく載っている" loading="lazy">
+    </div>
+  </article>
 
-<div class="work">
-  <h3><span class="badge b-self">自主制作</span>4. LINEリッチメニュー（デザイン学習Bot）</h3>
-  <p class="meta">LINEリッチメニュー デザイン／実装 ｜ LINE Messaging API</p>
-  <p>デザインの名作を毎日届ける学習Botのリッチメニュー。2ボタン構成で視認性とタップしやすさを両立させ、昼（新作）と夜（名作）で色調を分けて時間帯の感覚も表現しました。Flex Messageの学習カードUIも設計しています。</p>
-  <p class="spec"><b>担当範囲</b>：デザイン／実装（全て）　<b>使用ツール</b>：Illustrator、LINE Messaging API</p>
-  <div class="imgs"><img class="w-rich" src="images/richmenu.jpg" alt="LINEリッチメニュー"></div>
-</div>
+  <article class="work">
+    <h3><span class="tag tag-self">自主制作</span>家族の見守りサービス「MimamoriVoice」</h3>
+    <p class="kind sub">サービスの画面のデザインと開発</p>
+    <p class="desc">離れて暮らす家族が、声を届け合うサービスです。見張られている感じではなく、声が届くあたたかさを大事にしました。届いた声の一覧やカレンダーなど、毎日使う画面の組み立てから実装までしています。</p>
+    <dl class="spec">
+      <dt>担当</dt><dd>コンセプト、画面のデザイン、実装</dd>
+      <dt>使ったもの</dt><dd>Figma、Next.js、LINE Messaging API</dd>
+      <dt>サイト</dt><dd><a href="https://mimamori-voice.vercel.app">mimamori-voice.vercel.app</a></dd>
+    </dl>
+    <div class="imgs">
+      <img class="w-wide" src="images/mimamori.jpg" width="1000" height="486" alt="MimamoriVoiceの画面。届いた声の一覧とカレンダー" loading="lazy">
+    </div>
+  </article>
 
-<h2>本業での担当実績（守秘義務のため概要のみ）</h2>
-<ul class="list">
-  <li>ToC向けモバイルサービスのUIデザイン（約3年）— 画面設計、デザインシステム運用</li>
-  <li>新規事業における価値検証・ユーザーリサーチの設計と実施</li>
-  <li>AIエージェントを管理するサービスのデザイン（デザインシステム／ハーネス設計）</li>
-</ul>
-<p class="note">※ 本業の制作物は守秘義務のため掲載できません。本ポートフォリオでは公開可能な実績と自主制作を掲載しています。</p>
+  <article class="work">
+    <h3><span class="tag tag-self">自主制作</span>デザインを学ぶLINEのリッチメニュー</h3>
+    <p class="kind sub">LINEのリッチメニューのデザインと設定</p>
+    <p class="desc">デザインの名作を毎日届けるLINEのリッチメニューです。ボタンを2つにして、見やすく押しやすくしました。昼は新しい作品、夜は名作と、時間で色を変えています。届くメッセージのカードもデザインしました。</p>
+    <dl class="spec">
+      <dt>担当</dt><dd>デザイン、設定</dd>
+      <dt>使ったもの</dt><dd>Illustrator、LINE Messaging API</dd>
+    </dl>
+    <div class="imgs">
+      <img class="w-wide" src="images/richmenu.jpg" width="1100" height="370" alt="LINEのリッチメニュー。昼と夜で色が違う2つのボタン" loading="lazy">
+    </div>
+  </article>
+</section>
 
-<h2>スキル</h2>
-<p class="role">Figma（実務4年）／ Illustrator・Photoshop（ロゴ・印刷物）／ HTML・CSS・JavaScript（実装まで一貫対応）／ Next.js・React ／ STUDIO</p>
+<section id="price">
+  <h2>頼めることと料金</h2>
+  <table>
+    <tr>
+      <td><p class="what">LP（1ページのホームページ）</p><p class="sub">デザイン、コーディング、スマホ対応、公開の作業まで。直しは2回までです。</p></td>
+      <td class="price">55,000円から</td>
+    </tr>
+    <tr>
+      <td><p class="what">何ページかあるホームページ</p><p class="sub">ニュースなどを、自分で更新できる形にもできます。</p></td>
+      <td class="price">お見積もり</td>
+    </tr>
+    <tr>
+      <td><p class="what">ロゴ</p><p class="sub">3つの案から選んでもらいます。直しは2回までです。</p></td>
+      <td class="price">30,000円から</td>
+    </tr>
+    <tr>
+      <td><p class="what">名刺、チラシ、メニューなどの印刷物</p></td>
+      <td class="price">15,000円から</td>
+    </tr>
+    <tr>
+      <td><p class="what">LINEのリッチメニュー</p><p class="sub">デザインと設定までします。</p></td>
+      <td class="price">15,000円から</td>
+    </tr>
+  </table>
+  <p class="sub note">ロゴやLINEのリッチメニューは、ホームページと一緒に頼むこともできます。金額は、内容を聞いてからお見積もりします。</p>
+</section>
 
-<h2>料金目安（単発）</h2>
-<table>
-  <tr><td>LP制作（デザイン＋コーディング、修正2回まで）</td><td class="price">55,000円〜</td></tr>
-  <tr><td>ロゴ制作（3案提示、修正2回まで）</td><td class="price">30,000円〜</td></tr>
-  <tr><td>名刺・チラシ・メニューなどの印刷物</td><td class="price">15,000円〜</td></tr>
-  <tr><td>LINEリッチメニュー（デザイン＋設定）</td><td class="price">15,000円〜</td></tr>
-</table>
+<section id="flow">
+  <h2>頼んでから公開まで</h2>
+  <ol class="steps">
+    <li><b>お話を聞く</b>だれに見てほしいか、何を伝えたいかを聞きます。</li>
+    <li><b>お見積もり</b>作るものを決めて、金額と日数をお伝えします。</li>
+    <li><b>はじめの案</b>LPは、文章や写真をいただいてから3日ほどで、はじめの案をお見せします。</li>
+    <li><b>直す</b>見ていただいた意見をもとに、2回まで直します。</li>
+    <li><b>公開</b>サーバーに置いて公開します。ファイルもお渡しします。</li>
+  </ol>
+  <p class="sub">用意していただくのは、伝えたいこと、写真、ロゴ（あれば）です。文章がまだないときは、お話をもとに、たたき台の文章を作ります。</p>
+</section>
 
-<h2>対応条件・制作の流れ</h2>
-<ul class="list">
-  <li>稼働時間：平日夜・土日中心（同時進行は原則1件まで）</li>
-  <li>返信目安：いただいたメッセージには24時間以内に返信します</li>
-  <li>納期目安：LP初稿は素材をご支給いただいてから約3日</li>
-  <li>進め方：ヒアリング → 範囲を固定してお見積り → 初稿 → 修正（2回まで）→ 納品</li>
-  <li>請求書の発行に対応します</li>
-</ul>
+<section id="about">
+  <h2>田代について</h2>
+  <p>デザイナーになって4年です。本業の仕事はお客さまとの約束で見せられないので、何をしてきたかだけを書きます。</p>
+  <ul class="list">
+    <li>スマホで使うサービスの画面のデザイン（約3年）。画面の組み立てと、デザインの決まりの運用</li>
+    <li>新しい事業で、使う人に話を聞き、本当に欲しがられるかを確かめる仕事</li>
+    <li>AIのエージェントを管理するサービスのデザインと、デザインの決まりづくり</li>
+  </ul>
+  <dl class="spec">
+    <dt>使えるもの</dt><dd>Figma（仕事で4年）、Illustrator、Photoshop、HTML、CSS、JavaScript、Next.js、React、STUDIO</dd>
+    <dt>作業する時間</dt><dd>平日の夜と土日。同時に受けるのは1件までです</dd>
+    <dt>返信</dt><dd>メッセージには24時間以内に返信します</dd>
+    <dt>請求書</dt><dd>発行できます</dd>
+  </dl>
+</section>
+
+<section id="faq">
+  <h2>よくある質問</h2>
+  <dl class="faq">
+    <dt>文章や写真がなくても頼めますか</dt>
+    <dd>頼めます。お話をもとに、たたき台の文章を作ります。写真は、無料で使える写真から選ぶこともできます。</dd>
+    <dt>公開したあとに直せますか</dt>
+    <dd>直せます。文字や写真の差し替えは、その都度お見積もりします。ニュースなどをよく更新するときは、自分で更新できる形にもできます。</dd>
+    <dt>ドメインやサーバーはどうなりますか</dt>
+    <dd>費用はお客さまの負担です。取り方と設定はお手伝いします。</dd>
+  </dl>
+</section>
+
+<section id="contact">
+  <h2>相談のしかた</h2>
+  <div class="contact">
+    <p>このページを見つけたクラウドソーシングのサイトから、メッセージを送ってください。まだ何を頼むか決まっていなくても大丈夫です。</p>
+    <p class="sub">作ったもののコードは <a href="https://github.com/harukaaatashi">GitHub</a> で見られます。</p>
+  </div>
+</section>
 
 <footer>
-  お問い合わせは各プラットフォームのメッセージからお願いいたします。<br>
-  GitHub：<a href="https://github.com/harukaaatashi">github.com/harukaaatashi</a>（開発実績をご覧いただけます）
+  <p class="sub">田代 / Webデザイナー</p>
 </footer>
-</body></html>
+
+</body>
+</html>
